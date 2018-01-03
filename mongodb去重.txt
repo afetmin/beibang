@@ -1,0 +1,25 @@
+
+MongoDB去重：
+
+mongoexport.exe -d database_name -c collection_name -o filename.json
+
+mongo.exe
+
+use database_name
+
+db.collection_name.remove({})
+
+db.collection_name.ensureIndex({"userid":1},{"unique":true})
+
+CTRL C
+
+mongoimport.exe -d database_name -c collection_name --upsert filename.json
+
+
+
+
+模糊关键词查找：
+
+result = content.find({'description':{'$regex':'asphalt','$options':'i'}})
+
+asphalt是查询的词，i忽略大小写

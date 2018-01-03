@@ -7,6 +7,8 @@ def get_html(url):
     try:
         html = requests.get(url, timeout=10)
     except TimeoutError as why:
+        time.sleep(10)
+        html = requests.get(url, timeout=10)  # 重试
         print(why)
         pass
     return html
@@ -41,7 +43,8 @@ def save_data(html):
         key_data = {
             'keyword': keyword
         }
-        find_keys.insert(key_data)
+        if not 'chip' in keyword.split():  # 过滤带有chip字段的关键词
+            find_keys.insert(key_data)
     for t, d in zip(titles, des):
         main_data = {
             'title': t,
@@ -58,23 +61,35 @@ def parse_url():
         find_keys.delete_one(sel_key)  # 删掉查过的记录
         keyword = sel_key['keyword']
         with open('seen_keywords.txt', 'a+') as f:
-            f.write(str(keyword)+'\n')  # 查过的关键字保存到txt里
+            f.write(str(keyword) + '\n')  # 查过的关键字保存到txt里
         q = '+'.join(keyword.split())
         url = base_url.format(q)
-        print('获得一条解析后的URL:%s'%url)
+        print('获得一条解析后的URL:%s' % url)
     except BaseException as why:
         print(why)
         pass
     return url
 
 
+def parse_txt_to_url():
+    keywords_list = []
+    source = 'main_keywords.txt'
+    with open(source, 'r') as f:
+        content = f.read()
+        for key in content.split('\n'):
+            keyword = '+'.join(key.split())
+            keywords_list.append(keyword)
+    return keywords_list
+
+
 if __name__ == '__main__':
-    start_url = 'http://search.monstercrawler.com/monster33/search/web?q=asphalt+chip+sealer'
-    html = get_html(start_url)
-    save_data(html)
-    n = 0
-    while n < 200:
-        url = parse_url()
-        web = get_html(url)
-        save_data(web)
-        n += 1
+    for q in parse_txt_to_url():
+        start_url = 'http://search.monstercrawler.com/monster33/search/web?q={}'.format(q)
+        html = get_html(start_url)
+        save_data(html)
+        n = 0
+        while n < 200:
+            url = parse_url()
+            web = get_html(url)
+            save_data(web)
+            n += 1
