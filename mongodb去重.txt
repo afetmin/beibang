@@ -23,3 +23,14 @@ mongoimport.exe -d database_name -c collection_name --upsert filename.json
 result = content.find({'description':{'$regex':'asphalt','$options':'i'}})
 
 asphalt是查询的词，i忽略大小写
+
+
+程序自动重启：
+def restart_program():
+    python = sys.executable
+    os.execl(python, python, *sys.argv)
+
+
+数据库重命名：
+use admin;
+db.runCommand({renameCollection: "test.test", to: "test1.test"});
