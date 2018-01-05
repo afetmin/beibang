@@ -34,3 +34,6 @@ def restart_program():
 数据库重命名：
 use admin;
 db.runCommand({renameCollection: "test.test", to: "test1.test"});
+
+多个关键字劈开：
+re.split(pattern,str)

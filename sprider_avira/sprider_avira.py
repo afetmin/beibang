@@ -39,7 +39,7 @@ class createMongo(object):
             abstract = baseuri.get('abstract', 'none')
             db_data = {
                 'title': title,
-                'abstract': abstract
+                'description': abstract
             }
             self.contents.insert(db_data)
         print('已写入数据库')
@@ -51,7 +51,7 @@ def parse_txt_to_url():
     with open(source, 'r') as f:
         content = f.read()
         if not content is None:
-            for key in content.split('\n'):
+            for key in content.strip().split('\n'):
                 if not '+' in key:
                     keyword = '+'.join(key.split())
                     keywords_deque.append(keyword)
@@ -70,20 +70,23 @@ if __name__ == '__main__':
     keywords = parse_txt_to_url()
     base_url = 'https://search.avira.com/web?q={}&p={}&l=en_US'
     mongo = createMongo()
-    while keywords:
-        q = keywords.popleft()
-        urls = [base_url.format(q, page) for page in range(1, 4)]
-        try:
+    try:
+        while keywords:
+            q = keywords.popleft()
+            urls = [base_url.format(q, page) for page in range(1, 4)]
             for url in urls:
                 html = get_html(url)
                 print('读取链接{}'.format(url))
                 mongo.save_data(html)
-        except BaseException as why:
-            print(why)
-            with open('seen_keywords.txt','w') as f:
-                while keywords:
-                    f.write(keywords.popleft()+'\n')
-            print('正在等待5分钟后重启...')
-            time.sleep(300)
-            restart_program()
+    except Exception as why:
+        print(why)
+        with open('seen_keywords.txt','w') as f:
+            while keywords:
+                f.write(keywords.popleft()+'\n')
+        print('正在等待2分钟后重启...')
+        time.sleep(120)
+        restart_program()
+    else:
+        print('爬取完毕！爬虫程序正常退出...')
+
 

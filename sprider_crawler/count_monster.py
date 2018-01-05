@@ -1,7 +1,7 @@
 from count_mongo import countMongo
-
+from pymongo import MongoClient
 def count_monster():
-    monster = countMongo('monstercrawler', 'crack+sealing+machine_contents','crack+sealing+machine_keys')
+    monster = countMongo('monstercralwer', 'crack_sealing_machine_contents','crack_sealing_machine_keys')
     monster.count()
 
 def count_avira():
@@ -9,5 +9,6 @@ def count_avira():
     avira.count()
 
 
-count_avira()
+# count_avira()
 # count_monster()
+

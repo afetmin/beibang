@@ -1,12 +1,17 @@
 import time
 import sys
 import os
-# def restart_program():
-#   python = sys.executable
-  # os.execl(python, python, * sys.argv)
-print(*sys.argv)
-# if __name__ == "__main__":
-#   print ('start...')
-#   print ("3 秒后, 程序将结束...")
-#   time.sleep(3)
-#   restart_program()
+from collections import deque
+import requests, time, sys, os
+from bs4 import BeautifulSoup
+import pymongo
+from collections import deque
+from lxml import etree
+
+url = 'https://www.bing.com/search?q=asphalt+chip+sealer&ensearch=1'
+r = requests.get(url)
+tree = etree.HTML(r.content)
+sidebar = tree.xpath("//*[@id='b_results']/li[position()=10]/div/div/div[count(./.)>0]")
+print(sidebar)
+for n in sidebar:
+	print(n.text)

@@ -36,7 +36,7 @@ def parse_html(html):
         searchAdresults = list(map(lambda x: x.get_text().strip(), searchAdresults))
         resultTitles = list(map(lambda x: x.get_text(), resultTitles))
         resultDes = list(map(lambda x: x.get_text(), resultDes))
-    except BaseException as why:
+    except Exception as why:
         print(why)
         print('未匹配到')
         return
@@ -99,7 +99,7 @@ class createMongo(object):
             other_urls = [other_url.format(q, page) for page in range(1, 4)]
             print('获得一个其他搜索引擎列表！')
             print('获得一条解析后的URL:%s' % url)
-        except BaseException as why:
+        except Exception as why:
             print(why)
             return
         return url, other_urls
@@ -111,7 +111,7 @@ def parse_txt_to_url():
     with open(source, 'r') as f:
         content = f.read()
         if not content is None:
-            for key in content.split('\n'):
+            for key in content.strip().split('\n'):
                 if not '+' in key:
                     keyword = '+'.join(key.split())
                     keywords_deque.append(keyword)
@@ -147,13 +147,15 @@ if __name__ == '__main__':
                     other_web = get_html(other_url)
                     createmongo.save_other_data(other_web)
                 n += 1
-    except BaseException as why:
+    except Exception as why:
         print(why)
         with open('main_keywords.txt', 'w') as f:
+            f.write(q + '\n')
             while keywords_list:
-                f.write(q+'\n')
                 f.write(keywords_list.popleft() + '\n')
-        print('正在等待5分钟后重启...')
-        time.sleep(300)
+        print('正在等待2分钟后重启...')
+        time.sleep(120)
         restart_program()
-    print('Done!')
+    else:
+        print('爬取完毕！程序正常退出...')
+
