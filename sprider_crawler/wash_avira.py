@@ -1,7 +1,4 @@
 #coding:utf-8
-"""
-清洗数据库里含有特殊字符的内容，替换掉错误的特殊字符
-"""
 from pymongo import MongoClient
 import re
 conn = MongoClient('127.0.0.1', 27017)

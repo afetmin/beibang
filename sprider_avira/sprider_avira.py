@@ -1,7 +1,8 @@
 import requests
 import pymongo
 from collections import deque
-import sys,os,time
+import sys, os, time
+
 
 # from get_proxies import get_arandom_ip
 
@@ -66,7 +67,9 @@ def restart_program():
     python = sys.executable
     os.execl(python, python, *sys.argv)
 
+
 if __name__ == '__main__':
+    start = time.time()
     keywords = parse_txt_to_url()
     base_url = 'https://search.avira.com/web?q={}&p={}&l=en_US'
     mongo = createMongo()
@@ -80,13 +83,12 @@ if __name__ == '__main__':
                 mongo.save_data(html)
     except Exception as why:
         print(why)
-        with open('seen_keywords.txt','w') as f:
+        with open('seen_keywords.txt', 'w') as f:
             while keywords:
-                f.write(keywords.popleft()+'\n')
+                f.write(keywords.popleft() + '\n')
         print('正在等待2分钟后重启...')
         time.sleep(120)
         restart_program()
     else:
         print('爬取完毕！爬虫程序正常退出...')
-
-
+        print('共耗时{}'.format(time.time()-start))

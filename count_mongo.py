@@ -1,3 +1,7 @@
+#coding:utf-8
+"""
+一个数据库查询类
+"""
 import pymongo
 import time
 

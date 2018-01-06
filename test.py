@@ -8,10 +8,10 @@ import pymongo
 from collections import deque
 from lxml import etree
 
-url = 'https://www.bing.com/search?q=asphalt+chip+sealer&ensearch=1'
-r = requests.get(url)
-tree = etree.HTML(r.content)
-sidebar = tree.xpath("//*[@id='b_results']/li[position()=10]/div/div/div[count(./.)>0]")
-print(sidebar)
-for n in sidebar:
-	print(n.text)
+word = '''
+        asphalt crack machine equipment cracks driveway seal 
+        sealer sealcoat sealcoating machines paving trucks 
+        truck paver pavers
+        '''
+
+print(word.split())

@@ -37,3 +37,8 @@ db.runCommand({renameCollection: "test.test", to: "test1.test"});
 
 多个关键字劈开：
 re.split(pattern,str)
+
+
+恰当的判断多个值是否在 list 中:
+if all/any(v in l1 for v in ['v1', 'v2', 'v3']):
+    pass
