@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3638f632-1e0c-411f-a15c-0739981f75ec" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/sprider_avira/wash_txt.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/sprider_crawler/sprider_crawler.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/count_mongo.py" afterPath="$PROJECT_DIR$/count_mongo.py" />
-      <change beforePath="$PROJECT_DIR$/mongodb去重.txt" afterPath="$PROJECT_DIR$/mongodb去重.txt" />
-      <change beforePath="$PROJECT_DIR$/sprider_avira/db_to_txt.py" afterPath="$PROJECT_DIR$/sprider_avira/db_to_txt.py" />
-      <change beforePath="$PROJECT_DIR$/sprider_avira/seen_keywords - 副本.txt" afterPath="$PROJECT_DIR$/sprider_avira/seen_keywords - 副本.txt" />
-      <change beforePath="$PROJECT_DIR$/sprider_avira/seen_keywords.txt" afterPath="$PROJECT_DIR$/sprider_avira/seen_keywords.txt" />
       <change beforePath="$PROJECT_DIR$/sprider_avira/sprider_avira.py" afterPath="$PROJECT_DIR$/sprider_avira/sprider_avira.py" />
-      <change beforePath="$PROJECT_DIR$/sprider_avira/wash_avira.py" afterPath="$PROJECT_DIR$/sprider_avira/wash_avira.py" />
       <change beforePath="$PROJECT_DIR$/sprider_bing/sprider_bing.py" afterPath="$PROJECT_DIR$/sprider_bing/sprider_bing.py" />
       <change beforePath="$PROJECT_DIR$/sprider_crawler/count_monster.py" afterPath="$PROJECT_DIR$/sprider_crawler/count_monster.py" />
-      <change beforePath="$PROJECT_DIR$/sprider_crawler/main_keywords.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sprider_crawler/seen_keywords.txt" afterPath="$PROJECT_DIR$/sprider_crawler/seen_keywords.txt" />
-      <change beforePath="$PROJECT_DIR$/sprider_crawler/sprider_webcrawler.py" afterPath="" />
       <change beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,11 +18,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="sprider_monster.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sprider_crawler/sprider_monster.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="98" column="44" lean-forward="false" selection-start-line="98" selection-start-column="44" selection-end-line="98" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sprider_crawler.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sprider_crawler/sprider_crawler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="335">
+              <caret line="71" column="32" lean-forward="true" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="count_monster.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sprider_crawler/count_monster.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+            <state relative-caret-position="400">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="e#32#66#0" expanded="true" />
               </folding>
@@ -39,36 +54,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="count_mongo.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="count_mongo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/count_mongo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-118">
+            <state relative-caret-position="40">
               <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-              <folding>
-                <element signature="e#31#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wash_txt.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sprider_crawler/wash_txt.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="3" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sprider_monster.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sprider_crawler/sprider_monster.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -76,11 +67,9 @@
       <file leaf-file-name="sprider_bing.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sprider_bing/sprider_bing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="2520">
+              <caret line="129" column="6" lean-forward="false" selection-start-line="129" selection-start-column="6" selection-end-line="129" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -88,23 +77,9 @@
       <file leaf-file-name="sprider_avira.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sprider_avira/sprider_avira.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="80" column="36" lean-forward="true" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wash_avira.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sprider_avira/wash_avira.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-              <folding>
-                <element signature="e#49#80#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="2160">
+              <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="112" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -142,21 +117,21 @@
         <option value="$PROJECT_DIR$/sprider_crawler/sprider_webcrawler.py" />
         <option value="$PROJECT_DIR$/get_proxies.py" />
         <option value="$PROJECT_DIR$/sprider_crawler/sprider_monster.py" />
-        <option value="$PROJECT_DIR$/sprider_avira/sprider_avira.py" />
         <option value="$PROJECT_DIR$/sprider_avira/wash_txt.py" />
-        <option value="$PROJECT_DIR$/sprider_bing/sprider_bing.py" />
         <option value="$PROJECT_DIR$/sprider_avira/db_to_txt.py" />
-        <option value="$PROJECT_DIR$/sprider_crawler/count_monster.py" />
         <option value="$PROJECT_DIR$/count_mongo.py" />
         <option value="$PROJECT_DIR$/sprider_crawler/wash_txt.py" />
         <option value="$PROJECT_DIR$/sprider_avira/wash_avira.py" />
+        <option value="$PROJECT_DIR$/sprider_avira/sprider_avira.py" />
+        <option value="$PROJECT_DIR$/sprider_bing/sprider_bing.py" />
+        <option value="$PROJECT_DIR$/sprider_crawler/count_monster.py" />
+        <option value="$PROJECT_DIR$/sprider_crawler/sprider_crawler.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="507" />
-    <option name="y" value="18" />
-    <option name="width" value="960" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="690" />
+    <option name="width" value="1242" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -177,8 +152,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -205,11 +178,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -242,24 +217,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="db_to_txt" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sprider_avira" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="yilun" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sprider_avira/db_to_txt.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="sprider_bing" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -273,6 +230,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="yilun" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sprider_bing/sprider_bing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="sprider_crawler" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sprider_crawler" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="yilun" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sprider_crawler/sprider_crawler.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -317,17 +292,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.count_monster" />
       <item index="1" class="java.lang.String" itemvalue="Python.sprider_bing" />
-      <item index="2" class="java.lang.String" itemvalue="Python.db_to_txt" />
-      <item index="3" class="java.lang.String" itemvalue="Python.wash_txt" />
-      <item index="4" class="java.lang.String" itemvalue="Python.wash_txt (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.wash_txt" />
+      <item index="3" class="java.lang.String" itemvalue="Python.wash_txt (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.sprider_crawler" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.count_monster" />
-        <item index="1" class="java.lang.String" itemvalue="Python.wash_txt (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.sprider_bing" />
-        <item index="3" class="java.lang.String" itemvalue="Python.wash_txt" />
-        <item index="4" class="java.lang.String" itemvalue="Python.db_to_txt" />
+        <item index="1" class="java.lang.String" itemvalue="Python.sprider_crawler" />
+        <item index="2" class="java.lang.String" itemvalue="Python.wash_txt (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.sprider_bing" />
+        <item index="4" class="java.lang.String" itemvalue="Python.wash_txt" />
       </list>
     </recent_temporary>
   </component>
@@ -357,20 +332,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="690" y="0" width="1242" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19083156" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13874789" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964602" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964602" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29130435" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13827434" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09541578" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17935702" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -388,30 +363,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sprider_crawler/sprider_monster.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="81" column="39" lean-forward="false" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sprider_crawler/sprider_webcrawler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1040">
-          <caret line="54" column="30" lean-forward="false" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sprider_crawler/sprider_webcrawler.py" />
     <entry file="file://$PROJECT_DIR$/sprider_crawler/count_monster.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#32#66#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -426,9 +382,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-          <folding>
-            <element signature="e#31#45#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -442,20 +395,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sprider_crawler/sprider_webcrawler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1040">
-          <caret line="54" column="30" lean-forward="false" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sprider_crawler/sprider_webcrawler.py" />
     <entry file="file://$PROJECT_DIR$/sprider_crawler/count_monster.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#32#66#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -463,9 +407,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-          <folding>
-            <element signature="e#31#45#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -479,20 +420,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sprider_crawler/sprider_webcrawler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1040">
-          <caret line="54" column="30" lean-forward="false" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sprider_crawler/sprider_webcrawler.py" />
     <entry file="file://$PROJECT_DIR$/sprider_crawler/count_monster.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#32#66#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -500,9 +432,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-          <folding>
-            <element signature="e#31#45#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -516,13 +445,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sprider_crawler/sprider_webcrawler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="54" column="30" lean-forward="false" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sprider_crawler/sprider_webcrawler.py" />
     <entry file="file://$PROJECT_DIR$/sprider_crawler/sprider_monster.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1760">
@@ -537,9 +460,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-          <folding>
-            <element signature="e#31#45#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -547,9 +467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-          <folding>
-            <element signature="e#32#66#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -581,9 +498,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-          <folding>
-            <element signature="e#31#45#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -591,9 +505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="34" lean-forward="true" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-          <folding>
-            <element signature="e#32#66#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -625,9 +536,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#31#45#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -652,9 +560,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="34" lean-forward="true" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-          <folding>
-            <element signature="e#32#66#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -662,9 +567,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#31#45#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -689,9 +591,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#32#66#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -717,13 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sprider_avira/wash_txt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sprider_crawler/wash_avira.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -735,7 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -743,24 +634,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sprider_crawler/count_monster.py">
+    <entry file="file://$PROJECT_DIR$/sprider_crawler/sprider_webcrawler.py" />
+    <entry file="file://$PROJECT_DIR$/get_proxies.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-          <folding>
-            <element signature="e#32#66#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="420">
+          <caret line="23" column="12" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sprider_avira/wash_avira.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sprider_avira/wash_txt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="84" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sprider_crawler/wash_txt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="26" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="7" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sprider_crawler/sprider_monster.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="98" column="44" lean-forward="false" selection-start-line="98" selection-start-column="44" selection-end-line="98" selection-end-column="44" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
@@ -769,64 +678,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sprider_bing/sprider_bing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2520">
+          <caret line="129" column="6" lean-forward="false" selection-start-line="129" selection-start-column="6" selection-end-line="129" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sprider_avira/sprider_avira.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="80" column="36" lean-forward="true" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sprider_crawler/wash_txt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sprider_crawler/sprider_webcrawler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1002">
-          <caret line="54" column="30" lean-forward="false" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sprider_avira/wash_avira.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding>
-            <element signature="e#49#80#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/get_proxies.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="23" column="12" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+        <state relative-caret-position="2160">
+          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="112" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/count_mongo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-118">
+        <state relative-caret-position="40">
           <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sprider_crawler/count_monster.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
-            <element signature="e#31#45#0" expanded="true" />
+            <element signature="e#32#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sprider_crawler/sprider_crawler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="71" column="32" lean-forward="true" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
