@@ -32,9 +32,9 @@ class createMongo(object):
     def __init__(self):
         conn = pymongo.MongoClient('127.0.0.1', 27017)
         db = conn['avira']
-        self.contents = db['asphalt_contents']
+        self.contents = db['paver_contents']
         webcrawler = conn['webcrawler']
-        self.asphalt_avira_seen_keys = webcrawler['asphalt_avira_seen_keys']
+        self.asphalt_avira_seen_keys = webcrawler['paver_avira_seen_keys']
 
     def save_data(self, html):
         for baseuri in html['results']:

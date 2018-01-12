@@ -43,7 +43,7 @@ def get_content(html):
 
 class connectDb(object):
 
-    def __init__(self, col_name='asphalt'):
+    def __init__(self, col_name='paver'):
         conn = pymongo.MongoClient('127.0.0.1', 27017)
         db = conn['webcrawler']
         self.find_keys = db[str(col_name) + '_keys']
@@ -98,7 +98,7 @@ def restart_program():
 
 if __name__ == "__main__":
     start = time.time()
-    start_url = 'http://www.webcrawler.com/serp?q=asphalt+crack+filling+machine&page=1'
+    start_url = 'http://www.webcrawler.com/serp?q=asphalt+paver&page=1'
     try:
         start_html = get_html(start_url)
         conndb = connectDb()
@@ -120,5 +120,3 @@ if __name__ == "__main__":
         print('爬取完毕！程序正常退出...')
 
     print('共耗时{}'.format(time.time()-start))
-    time.sleep(600)
-    restart_program()

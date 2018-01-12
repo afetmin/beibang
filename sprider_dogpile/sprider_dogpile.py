@@ -5,8 +5,9 @@ from collections import deque
 
 # from get_proxies import get_arandom_ip
 conn = pymongo.MongoClient('127.0.0.1', 27017)
-bing_db = conn['second_web']
-bing = bing_db['contents']
+db = conn['dogpile']
+dogpile_contents = db['contents']
+dogpile_keys = db['keys']
 
 
 def get_html(url, tries=5):
@@ -35,46 +36,53 @@ def get_html(url, tries=5):
 
 
 def parse_html(html):
-    base_url = 'http://www.bing.com{}'
+    base_url = 'http://www.dogpile.com{}'
     try:
         soup = BeautifulSoup(html, 'html.parser')
-        titles = soup.select('.b_algo h2')
-        descriptions = soup.select('.b_caption p')
-        next_page = soup.select('li.b_pag a')[1:7]
-        page_urls = list(map(lambda x: x.get('href'), next_page))
-        page_urls = [base_url.format(page_url) for page_url in page_urls]
+        titles = soup.select('a.resultTitle')
+        descriptions = soup.select('div.resultDescription')
+        lookfor = soup.select('div.aylfResult')[:10]
+        next_page = soup.select('li.paginationUnselectedPage a')[1:5]
+        lookfor = list(map(lambda x: x.get_text().strip(), lookfor))
         titles = list(map(lambda x: x.get_text(), titles))
         descriptions = list(map(lambda x: x.get_text(), descriptions))
+        page_urls = list(map(lambda x: x.get('href'), next_page))
+        page_urls = [base_url.format(page_url) for page_url in page_urls]
     except Exception as why:
         print(why)
         print('未匹配到')
         return
-    return titles, descriptions, page_urls
+    return titles, descriptions, lookfor,page_urls
 
 
 def save_content(html):
-    titles, descriptions, page_urls = parse_html(html)
+    titles, descriptions, keyword,page_urls = parse_html(html)
     for t, d in zip(titles, descriptions):
         data = {
             'title': t,
             'description': d
         }
-        bing.insert(data)
+        dogpile_contents.insert(data)
+    for key in keyword:
+        key_data = {
+            'keyword':key
+        }
+        dogpile_keys.insert(key_data)
     for url in page_urls:
         html_content = get_html(url)
-        titles, descriptions, page_urls = parse_html(html_content)
+        titles, descriptions,keyword, page_urls = parse_html(html_content)
         for t, d in zip(titles, descriptions):
             data = {
                 'title': t,
                 'description': d
             }
-            bing.insert(data)
+            dogpile_contents.insert(data)
     print('已写入数据库！')
 
 
 def parse_txt_to_url():
     keywords_deque = deque()
-    with open('bing_keywords.txt', 'r') as f:
+    with open('dogpile_keywords.txt', 'r',encoding='utf-8') as f:
         content = f.read()
         if not content is None:
             for key in content.strip().split('\n'):
@@ -110,7 +118,7 @@ def restart_program():
 if __name__ == '__main__':
     start = time.time()
     keywords = parse_txt_to_url()
-    base_url = 'https://www.bing.com/search?q={}&ensearch=1'
+    base_url = 'http://www.dogpile.com/info.dogpl/search/web?q={}'
     try:
         while keywords:
             q = keywords.popleft()
@@ -122,7 +130,7 @@ if __name__ == '__main__':
             save_content(html)
     except Exception as why:
         print(why)
-        with open('bing_keywords.txt','w') as f:
+        with open('dogpile_keywords.txt','w',encoding='utf-8') as f:
             while keywords:
                 f.write(keywords.popleft()+'\n')
         print('出错了，未爬取的关键词保存了，正在等待2分钟后重启...')

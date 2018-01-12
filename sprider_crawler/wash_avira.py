@@ -2,10 +2,10 @@
 from pymongo import MongoClient
 import re
 conn = MongoClient('127.0.0.1', 27017)
-db = conn['avira']
-avira = db['avira_contents']
+db = conn['webcrawler']
+avira = db['paver_contents']
 cursor = avira.find()
-result = db['avira_results']
+result = db['paver_results']
 for content in cursor:
     if content.get('abstract',None):
         re_title = re.sub(r'(<strong>|</strong>)|[\u4e00-\u9fa5]|(&#)(\w)+|(&amp)|(&quot;);','',content['title'])

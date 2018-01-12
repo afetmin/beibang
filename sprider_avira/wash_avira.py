@@ -4,21 +4,23 @@
 """
 from pymongo import MongoClient
 import re
+import random
+ok_words = '''asphalt machine equipment cracks driveway sealer sealcoat sealant machines paving bitumen paver pavers road'''
 conn = MongoClient('127.0.0.1', 27017)
 db = conn['avira']
-avira = db['avira_contents']
+avira = db['avira_results']
 cursor = avira.find()
-result = db['avira_results']
+result = db['asphalt_results']
+replace_title = ['asphalt paving','ashalt chip sealer','asphalt distributor']
+pattern = re.compile(r'[\u4e00-\u9fa5]')
 for content in cursor:
-    if content.get('abstract',None):
-        re_title = re.sub(r'(<strong>|</strong>)|[\u4e00-\u9fa5]|(&#)(\w)+|(&amp)|(&quot;);','',content['title'])
-        re_abstract = re.sub(r'(<strong>|</strong>)|[\u4e00-\u9fa5]|(&#)(\w)+|(&amp)|(&quot;);','',content['abstract'])
-    else:
-        re_title = re.sub(r'(<strong>|</strong>)|[\u4e00-\u9fa5]|(&#)(\w)+|(&amp)|(&quot;);', '', content['title'])
-        re_abstract = re.sub(r'(<strong>|</strong>)|[\u4e00-\u9fa5]|(&#)(\w)+|(&amp)|(&quot;);','',content['description'])
-    data = {
-        'title':re_title,
-        'description':re_abstract
-    }
-    result.insert(data)
+    if len(pattern.findall(content['title'])) ==0 and len(pattern.findall(content['description'])) ==0:
+        if any(key in content['title'].split() for key in ok_words.split()):
+            re_title = re.sub(r'[@!#$%^*|]|(<strong>)|(</strong>)|(&amp;)|(&#\d+;)','',content['title'])
+            re_des = re.sub(r'[@!#$%^*|]|(<strong>)|(</strong>)|(&amp;)|(&#\d+;)','',content['description'])
+            data = {
+                'title':re_title,
+                'description':re_des
+            }
+            result.insert(data)
 print('Done!')

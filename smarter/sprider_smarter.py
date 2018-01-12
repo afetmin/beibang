@@ -1,16 +1,16 @@
 import requests, time, sys, os
 from bs4 import BeautifulSoup
 import pymongo
+from openpyxl import load_workbook
+from config import *
 from collections import deque
 
-# from get_proxies import get_arandom_ip
 conn = pymongo.MongoClient('127.0.0.1', 27017)
-bing_db = conn['second_web']
-bing = bing_db['contents']
+db = conn[db_name]
+collection_name = db[collection_name]
 
 
 def get_html(url, tries=5):
-    # proxies = get_arandom_ip()
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
         'Accept-Language': 'en-US'
@@ -35,72 +35,72 @@ def get_html(url, tries=5):
 
 
 def parse_html(html):
-    base_url = 'http://www.bing.com{}'
     try:
         soup = BeautifulSoup(html, 'html.parser')
-        titles = soup.select('.b_algo h2')
-        descriptions = soup.select('.b_caption p')
-        next_page = soup.select('li.b_pag a')[1:7]
-        page_urls = list(map(lambda x: x.get('href'), next_page))
-        page_urls = [base_url.format(page_url) for page_url in page_urls]
+        titles = soup.select('.PartialSearchResults-item-title')
+        descriptions = soup.select('.PartialSearchResults-item-abstract')
         titles = list(map(lambda x: x.get_text(), titles))
         descriptions = list(map(lambda x: x.get_text(), descriptions))
     except Exception as why:
         print(why)
         print('未匹配到')
         return
-    return titles, descriptions, page_urls
+    return titles, descriptions
 
 
 def save_content(html):
-    titles, descriptions, page_urls = parse_html(html)
+    titles, descriptions = parse_html(html)
     for t, d in zip(titles, descriptions):
         data = {
             'title': t,
             'description': d
         }
-        bing.insert(data)
-    for url in page_urls:
-        html_content = get_html(url)
-        titles, descriptions, page_urls = parse_html(html_content)
-        for t, d in zip(titles, descriptions):
-            data = {
-                'title': t,
-                'description': d
-            }
-            bing.insert(data)
+        collection_name.insert(data)
     print('已写入数据库！')
 
 
 def parse_txt_to_url():
-    keywords_deque = deque()
-    with open('bing_keywords.txt', 'r') as f:
+    keywords = deque()
+    with open('unseen_keywords.txt', 'r') as f:
         content = f.read()
-        if not content is None:
+        if content:
             for key in content.strip().split('\n'):
                 if not '+' in key:
                     keyword = '+'.join(key.split())
-                    keywords_deque.append(keyword)
+                    keywords.append(keyword)
                 else:
-                    keywords_deque.append(key)
+                    keywords.append(key)
         else:
             print('没有关键字了')
-    return keywords_deque
+    return keywords
 
 
-# def parse_db_to_url():
-#     try:
-#         sel_key = asphalt_bing_seen_keys.find().limit(-1).skip(0).next()  # 找到最上面的记录
-#         asphalt_bing_seen_keys.delete_one(sel_key)  # 删掉查过的记录
-#         keyword = sel_key['keyword']
-#         with open('bing_seen_keywords.txt', 'a+') as f:
-#             f.write(str(keyword) + '\n')  # 查过的关键字保存到txt里
-#         q = '+'.join(keyword.split())
-#     except Exception as why:
-#         print(why)
-#         return
-#     return q
+def parse_db_to_url():
+    try:
+        sel_key = collection_name.find().limit(-1).skip(0).next()  # 找到最上面的记录
+        collection_name.delete_one(sel_key)  # 删掉查过的记录
+        keyword = sel_key['keyword']
+        with open('seen_keywords.txt', 'a+') as f:
+            f.write(str(keyword) + '\n')  # 查过的关键字保存到txt里
+        q = '+'.join(keyword.split())
+    except Exception as why:
+        print(why)
+        return
+    return q
 
+def parse_excel_to_url():
+    contents = deque()
+    files = os.listdir()
+    for file in files:
+        if len(file.split('.'))==2:
+            if file.split('.')[1] == 'xlsx':
+                wb = load_workbook(str(file))
+                ws1 = wb.active
+                for i in ws1['A']:
+                    if i.value:
+                        q = '+'.join(i.value.split())
+                        contents.append(q)
+    return contents
 
 def restart_program():
     python = sys.executable
@@ -108,27 +108,24 @@ def restart_program():
 
 
 if __name__ == '__main__':
-    start = time.time()
     keywords = parse_txt_to_url()
-    base_url = 'https://www.bing.com/search?q={}&ensearch=1'
+    base_url = 'https://www.smarter.com/web?q={}&page={}'
     try:
         while keywords:
-            q = keywords.popleft()
-            if q is None:
-                break
-            url = base_url.format(q)
-            html = get_html(url)
-            print('正在获取链接{}的内容'.format(url))
-            save_content(html)
+            key = keywords.popleft()
+            urls = [base_url.format(key, page) for page in range(1, 4)]
+            for url in urls:
+                html = get_html(url)
+                print('正在获取链接{}的内容'.format(url))
+                save_content(html)
     except Exception as why:
         print(why)
-        with open('bing_keywords.txt','w') as f:
+        with open('unseen_keywords.txt','w') as f:
             while keywords:
                 f.write(keywords.popleft()+'\n')
-        print('出错了，未爬取的关键词保存了，正在等待2分钟后重启...')
+        print('出错了，还好未搜索的关键词保存了')
+        print('稍等片刻，2min后自动重启哦')
         time.sleep(120)
         restart_program()
     else:
         print('爬取完毕！爬虫程序正常退出...')
-    print('共耗时{}'.format(time.time() - start))
-
